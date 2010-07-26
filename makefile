@@ -1,4 +1,4 @@
-run : quick_sort.o 
-	gcc -o run quick_sort.o
-main.o : quick_sort.c
-	gcc -c -o quick_sort.o quick_sort.c
+run : binaryTree.o 
+	gcc -o run binaryTree.o
+main.o : binaryTree.c
+	gcc -c -o binaryTree.o binaryTree.c
