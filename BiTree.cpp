@@ -29,21 +29,26 @@ int main()
 		point=strA[i];
 		temp=Search(strB,point);
 		left=SearchLeft(Num,temp);
+		fout << "left->"<<left<<endl;
 		right=SearchRight(Num,temp);
+		fout << "right->"<<right<<endl;
 		if(left==-1&&right==-1)
 		{
 			
 			q[temp]=InsertLeftNode(root,point);
+			fout << "q[temp]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 		else if(left!=-1&&q[left]->rightChild==NULL)
 		{
 			q[temp]=InsertRightNode(q[left],point);
+			fout << "q[temp]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 		else if(right!=-1&&q[right]->leftChild==NULL)
 		{
 			q[temp]=InsertLeftNode(q[right],point);
+			fout << "q[temp]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 	}
@@ -56,5 +61,6 @@ int main()
 	printf("\nPostOrder: \t");
 	PostOrder(root->leftChild,Visit);
 	printf("\n*****************************************************************************\n\t\t\t\bCopyright @ 2009 Gary All Right Reserved\n");
+	fout.close();
 	return 0;
 }
