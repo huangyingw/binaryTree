@@ -30,7 +30,7 @@ int main()
 		fout<<"i="<<i<<endl;
 		point=strA[i];
 		temp=Search(strB,point);
-		fout << "Search for "<<point<<"'s position in in_order->"<<temp<<endl;
+		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
 		left=SearchLeft(Num,temp);
 		fout << "SearchLeft result->"<<left<<endl;
