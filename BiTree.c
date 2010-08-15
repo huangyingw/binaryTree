@@ -11,18 +11,17 @@ int main()
 	BiTreeNode *q[MaxSize+1];
 	BiTreeNode *root;
 	int left,right,temp;
-	//	for(i=0;i<=MaxSize;i++)
-	//	
-	//	struct Node *q[MaxSize];
 	int Num[MaxSize]={0};
-	char strA[MaxSize],strB[MaxSize];
+	char strA[MaxSize]="befcgdh",strB[MaxSize]="febgchd";
 	char point;int n;
 	printf("******************************************************************************\n");
 	printf("Please input PreOrder:");
-	scanf("%s",strA);
+	//scanf("%s",strA);
+	//strA="befcgdh";
 	printf("****************************************\n");
 	printf("Please input  InOrder:");
-	scanf("%s",strB);
+	//scanf("%s",strB);
+	//strB="febgchd";
 	printf("****************************************\n\n");
 	n=strlen(strA);
 	Initiate(&root);
