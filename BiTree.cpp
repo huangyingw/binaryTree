@@ -6,9 +6,9 @@
 #define MaxSize 20
 typedef char DataType;
 #include"Bitree.h"
-using std::cout;
-using std::endl;
 
+using std::cin; using std::cout; using std::endl;
+	
 int main()
 {
 	int i;
