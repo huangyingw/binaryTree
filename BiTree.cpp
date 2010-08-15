@@ -22,14 +22,13 @@ void PrintNum(int Num[])
 
 int main()
 {
-
 	fout.open("output.txt");
 
 	int i;
 	BiTreeNode *q[MaxSize+1];
 	BiTreeNode *root;
 	int left,right,temp;
-	int Num[MaxSize]={0};
+	int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
 	char strA[MaxSize]="befcgdh";//pre_order
 	char strB[MaxSize]="febgchd";//in_order
 	char point;int n;
@@ -44,6 +43,7 @@ int main()
 		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
 		PrintNum(Num);
+		
 		left=SearchLeft(Num,temp);
 		fout << "SearchLeft result->"<<left<<endl;
 		
@@ -80,7 +80,7 @@ int main()
 	InOrder(root->leftChild,Visit);
 	printf("\nPostOrder: \t");
 	PostOrder(root->leftChild,Visit);
-	printf("\n*****************************************************************************\n\t\t\t\bCopyright @ 2009 Gary All Right Reserved\n");
+	printf("\n");
 	fout.close();
 	return 0;
 }
