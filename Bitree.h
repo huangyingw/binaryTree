@@ -1,7 +1,8 @@
 typedef struct Node
-{ DataType data;
-struct Node *leftChild;
-struct Node *rightChild;
+{
+	DataType data;
+	struct Node *leftChild;
+	struct Node *rightChild;
 }BiTreeNode;
 void Initiate(BiTreeNode **root)
 {
