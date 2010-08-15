@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include<stdlib.h>
 #include<malloc.h>
 #include<string.h>
