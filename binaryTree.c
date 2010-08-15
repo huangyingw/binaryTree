@@ -54,7 +54,7 @@ void ShowBtree(BTREE Root,int Index)
   if(Root==NULL)return;
   i=Index*2;
   j=Index*2+1;
-  gotoxy(BtnPos[Index].x,BtnPos[Index].y);
+  //gotoxy(BtnPos[Index].x,BtnPos[Index].y);
   printf("%c",Root->Data);
   if(i<MAXCOUNT) ShowBtree(Root->LChild,i);
   if(j<MAXCOUNT) ShowBtree(Root->RChild,j);
@@ -103,9 +103,9 @@ BTREE CreatBtreeByOrder(void)
 void main()
 {
   BTREE Root;
-  clrscr();
+  //clrscr();
   InitBtreeNodePos();
   Root=CreatBtreeByOrder();
-  ShowBtree(Root,1);
+  //ShowBtree(Root,1);
   DestroyBtree(Root);
 }
