@@ -1,4 +1,4 @@
-run : binaryTree.o 
-	gcc -o run binaryTree.o
-main.o : binaryTree.c
-	gcc -c -o binaryTree.o binaryTree.c
+run : BiTree.o 
+	gcc -o run BiTree.o
+main.o : BiTree.c,Bitree.h
+	gcc -c -o BiTree.o BiTree.c,Bitree.h
