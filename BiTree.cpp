@@ -29,6 +29,7 @@ int main()
 		right=SearchRight(Num,temp);
 		if(left==-1&&right==-1)
 		{
+			
 			q[temp]=InsertLeftNode(root,point);
 			Num[temp]=1;
 		}
