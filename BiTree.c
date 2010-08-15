@@ -14,18 +14,8 @@ int main()
 	int Num[MaxSize]={0};
 	char strA[MaxSize]="befcgdh",strB[MaxSize]="febgchd";
 	char point;int n;
-	printf("******************************************************************************\n");
-	printf("Please input PreOrder:");
-	//scanf("%s",strA);
-	//strA="befcgdh";
-	printf("****************************************\n");
-	printf("Please input  InOrder:");
-	//scanf("%s",strB);
-	//strB="febgchd";
-	printf("****************************************\n\n");
 	n=strlen(strA);
 	Initiate(&root);
-	//	printf("%d",n);
 	for(i=0;i<n;i++)
 	{
 		point=strA[i];
