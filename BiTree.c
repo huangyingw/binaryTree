@@ -7,15 +7,13 @@ typedef char DataType;
 #include"Bitree.h"
 int main()
 {
-for(;;)
-{
-int i;
+	int i;
 	BiTreeNode *q[MaxSize+1];
 	BiTreeNode *root;
 	int left,right,temp;
-//	for(i=0;i<=MaxSize;i++)
-//	
-//	struct Node *q[MaxSize];
+	//	for(i=0;i<=MaxSize;i++)
+	//	
+	//	struct Node *q[MaxSize];
 	int Num[MaxSize]={0};
 	char strA[MaxSize],strB[MaxSize];
 	char point;int n;
@@ -28,7 +26,7 @@ int i;
 	printf("****************************************\n\n");
 	n=strlen(strA);
 	Initiate(&root);
-//	printf("%d",n);
+	//	printf("%d",n);
 	for(i=0;i<n;i++)
 	{
 		point=strA[i];
@@ -60,8 +58,5 @@ int i;
 	printf("\nPostOrder: \t");
 	PostOrder(root->leftChild,Visit);
 	printf("\n*****************************************************************************\n\t\t\t\bCopyright @ 2009 Gary All Right Reserved\n");
-}
 	return 0;
-	
-
 }
