@@ -1,10 +1,14 @@
 #include<stdio.h>
+#include <iostream.h>
 #include<stdlib.h>
 #include<malloc.h>
 #include<string.h>
 #define MaxSize 20
 typedef char DataType;
 #include"Bitree.h"
+using std::cout;
+using std::endl;
+
 int main()
 {
 	int i;
