@@ -98,8 +98,7 @@ int Search(char str[],char t)
 
 int SearchLeft(int Num[],int t)
 {
-	int i;
-	i=t;
+	int i=t;
 	while(Num[i]!=1&&i>=0)
 		i--;
 	if(Num[i]==1)
@@ -109,8 +108,7 @@ int SearchLeft(int Num[],int t)
 
 int SearchRight(int Num[],int t)
 {
-	int i;
-	i=t;
+	int i=t;
 	while(Num[i]!=1&&i<=MaxSize-2)
 		i++;
 	if(Num[i]==1)
