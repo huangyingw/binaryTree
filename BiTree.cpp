@@ -32,11 +32,10 @@ int main()
 		temp=Search(strB,point);
 		
 		left=SearchLeft(Num,temp);
-		fout << "SearchLeft->"<<left<<endl;
-		fout << "left->"<<left<<endl;
+		fout << "SearchLeft result->"<<left<<endl;
 		
 		right=SearchRight(Num,temp);
-		fout << "right->"<<right<<endl;
+		fout << "SearchRight result->"<<right<<endl;
 		
 		if(left==-1&&right==-1)//both
 		{
