@@ -4,12 +4,14 @@ typedef struct Node
 	struct Node *leftChild;
 	struct Node *rightChild;
 }BiTreeNode;
+
 void Initiate(BiTreeNode **root)
 {
 	*root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
 	(*root)->leftChild=NULL;
 	(*root)->rightChild=NULL;
 }
+
 BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x)
 {
 	BiTreeNode *s,*t;
@@ -22,6 +24,7 @@ BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x)
 	curr->leftChild=s;
 	return curr->leftChild;
 }
+
 BiTreeNode *InsertRightNode(BiTreeNode *curr,DataType x)
 {
 	BiTreeNode *s,*t;
@@ -34,6 +37,7 @@ BiTreeNode *InsertRightNode(BiTreeNode *curr,DataType x)
 	curr->rightChild=s;
 	return curr->rightChild;
 }
+
 void PrintBiTree(BiTreeNode *bt,int n)
 {
 	int i;
@@ -47,10 +51,12 @@ void PrintBiTree(BiTreeNode *bt,int n)
 	}
 	PrintBiTree(bt->leftChild,n+1);
 }
+
 void Visit(DataType item)
 {
 	printf("%c   ",item);
 }
+
 void PreOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
@@ -60,6 +66,7 @@ void PreOrder(BiTreeNode *t,void Visit(DataType item))
 		PreOrder(t->rightChild,Visit);
 	}
 }
+
 void InOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
@@ -70,16 +77,17 @@ void InOrder(BiTreeNode *t,void Visit(DataType item))
 		InOrder(t->rightChild,Visit);
 	}
 }
+
 void PostOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
 	{
-		
 		PostOrder(t->leftChild,Visit);
 		PostOrder(t->rightChild,Visit);
 		Visit(t->data);
 	}
 }
+
 int Search(char str[],char t)
 {
 	int i=0;
@@ -87,6 +95,7 @@ int Search(char str[],char t)
 		i++;
 	return i;
 }
+
 int SearchLeft(int Num[],int t)
 {
 	int i;
@@ -97,6 +106,7 @@ int SearchLeft(int Num[],int t)
 		return i;
 	else return -1;
 }
+
 int SearchRight(int Num[],int t)
 {
 	int i;
