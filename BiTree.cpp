@@ -9,9 +9,20 @@ typedef char DataType;
 #include"Bitree.h"
 using namespace std;
 
+ofstream fout;
+
+void PrintNum(int Num[])
+{
+	for(int index=0;index<MaxSize;index++)
+	{
+		fout<<Num[index];
+	}
+	fout<<endl;
+}
+
 int main()
 {
-	ofstream fout; 
+
 	fout.open("output.txt");
 
 	int i;
@@ -32,6 +43,7 @@ int main()
 		temp=Search(strB,point);
 		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
+		PrintNum(Num);
 		left=SearchLeft(Num,temp);
 		fout << "SearchLeft result->"<<left<<endl;
 		
