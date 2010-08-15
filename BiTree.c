@@ -12,7 +12,8 @@ int main()
 	BiTreeNode *root;
 	int left,right,temp;
 	int Num[MaxSize]={0};
-	char strA[MaxSize]="befcgdh",strB[MaxSize]="febgchd";
+	char strA[MaxSize]="befcgdh";
+	char strB[MaxSize]="febgchd";
 	char point;int n;
 	n=strlen(strA);
 	Initiate(&root);
