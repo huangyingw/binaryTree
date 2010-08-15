@@ -3,14 +3,19 @@
 #include<stdlib.h>
 #include<malloc.h>
 #include<string.h>
+#include <fstream>
 #define MaxSize 20
 typedef char DataType;
 #include"Bitree.h"
+using namespace std;
 using std::cout;
 using std::endl;
 
 int main()
 {
+	ofstream fout; 
+	fout.open("output.txt");
+
 	int i;
 	BiTreeNode *q[MaxSize+1];
 	BiTreeNode *root;
