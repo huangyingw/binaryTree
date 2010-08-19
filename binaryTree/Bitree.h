@@ -52,6 +52,9 @@ public:
 	void Print(BiTreeNode *bt,int n);
 	~BiTree();
 	void Visit(DataType item);
+	void PreOrder(BiTreeNode *t,void Visit(DataType item));
+	void InOrder(BiTreeNode *t,void Visit(DataType item));
+	void PostOrder(BiTreeNode *t,void Visit(DataType item));
 	void Print();
 	
 };
@@ -75,7 +78,7 @@ void BiTree::Visit(DataType item)
 	printf("%c   ",item);
 }
 
-void PreOrder(BiTreeNode *t,void Visit(DataType item))
+void BiTree::PreOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
 	{
@@ -85,7 +88,7 @@ void PreOrder(BiTreeNode *t,void Visit(DataType item))
 	}
 }
 
-void InOrder(BiTreeNode *t,void Visit(DataType item))
+void BiTree::InOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
 	{
@@ -96,7 +99,7 @@ void InOrder(BiTreeNode *t,void Visit(DataType item))
 	}
 }
 
-void PostOrder(BiTreeNode *t,void Visit(DataType item))
+void BiTree::PostOrder(BiTreeNode *t,void Visit(DataType item))
 {
 	if(t!=NULL)
 	{
