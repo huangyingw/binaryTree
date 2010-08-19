@@ -1,3 +1,5 @@
+#include <fstream>
+using namespace std;
 typedef struct Node
 {
 	DataType data;
@@ -37,6 +39,20 @@ BiTreeNode *InsertRightNode(BiTreeNode *curr,DataType x)
 	curr->rightChild=s;
 	return curr->rightChild;
 }
+
+class BiTree
+{
+private:
+	ofstream fout;
+
+public:
+	int* data;
+	int size;
+	BiTree(int len);
+	~BiTree();
+	void Print();
+	
+};
 
 void PrintBiTree(BiTreeNode *bt,int n)
 {
