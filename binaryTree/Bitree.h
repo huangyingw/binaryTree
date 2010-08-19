@@ -51,6 +51,7 @@ public:
 	BiTree(int len);
 	void Print(BiTreeNode *bt,int n);
 	~BiTree();
+	void Visit(DataType item);
 	void Print();
 	
 };
@@ -69,7 +70,7 @@ void BiTree::Print(BiTreeNode *bt,int n)
 	Print(bt->leftChild,n+1);
 }
 
-void Visit(DataType item)
+void BiTree::Visit(DataType item)
 {
 	printf("%c   ",item);
 }
