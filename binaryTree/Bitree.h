@@ -49,23 +49,24 @@ public:
 	int* data;
 	int size;
 	BiTree(int len);
+	void Print(BiTreeNode *bt,int n);
 	~BiTree();
 	void Print();
 	
 };
 
-void PrintBiTree(BiTreeNode *bt,int n)
+void BiTree::Print(BiTreeNode *bt,int n)
 {
 	int i;
 	if(bt==NULL) return;
-	PrintBiTree(bt->rightChild,n+1);
+	Print(bt->rightChild,n+1);
 	for(i=0;i<n-1;i++) printf("   ");
 	if(n>0)
 	{
 		printf("---");
 		printf("%c\n",bt->data);
 	}
-	PrintBiTree(bt->leftChild,n+1);
+	Print(bt->leftChild,n+1);
 }
 
 void Visit(DataType item)

@@ -30,6 +30,7 @@ void PrintNum(int Num[])
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	/*
 	fout.open("output.txt");
 
 	int i;
@@ -90,5 +91,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	PostOrder(root->leftChild,Visit);
 	printf("\n");
 	fout.close();
+	*/
 	return 0;
 }
