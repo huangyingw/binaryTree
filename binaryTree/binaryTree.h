@@ -16,41 +16,26 @@ public:
 	int* data;
 	int size;
 	BiTree(int len);
+	BiTreeNode * root;
+	BiTree(BiTreeNode *root);
 	void Print(BiTreeNode *bt,int n);
 	~BiTree();
 	void Visit(DataType item);
 	void PreOrder(BiTreeNode *t,void Visit(DataType item));
 	void InOrder(BiTreeNode *t,void Visit(DataType item));
 	void PostOrder(BiTreeNode *t,void Visit(DataType item));
-	void Print();
-};
-
-
-class BinaryTree
-{
-private:
-	ofstream fout; 
-
-public:
-	int* data;
-	int size;
-	BiTreeNode * root;
-	BinaryTree(BiTreeNode *root);
 	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
-	~BinaryTree();
 	void Print();
-	
 };
 
-
-BinaryTree::BinaryTree(BiTreeNode *root)
+BiTree::BiTree(BiTreeNode *root)
 {
 	root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
 	root->leftChild=NULL;
 	root->rightChild=NULL;
 }
 
-BiTreeNode* BinaryTree::InsertLeftNode(BiTreeNode *curr,DataType x)
+BiTreeNode* BiTree::InsertLeftNode(BiTreeNode *curr,DataType x)
 {
 	BiTreeNode *s,*t;
 	if(curr==NULL) return NULL;
