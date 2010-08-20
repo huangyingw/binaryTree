@@ -7,6 +7,21 @@ typedef struct Node
 	struct Node *rightChild;
 }BiTreeNode;
 
+class BinaryTree
+{
+private:
+	ofstream fout; 
+
+public:
+	int* data;
+	int size;
+	BinaryTree();
+	~BinaryTree();
+	void Print();
+	
+};
+
+
 void Initiate(BiTreeNode **root)
 {
 	*root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
