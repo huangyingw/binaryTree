@@ -16,18 +16,18 @@ public:
 	int* data;
 	int size;
 	BiTreeNode * root;
-	BinaryTree(BiTreeNode **root);
+	BinaryTree(BiTreeNode *root);
 	~BinaryTree();
 	void Print();
 	
 };
 
 
-BinaryTree::BinaryTree(BiTreeNode **root)
+BinaryTree::BinaryTree(BiTreeNode *root)
 {
-	*root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
-	(*root)->leftChild=NULL;
-	(*root)->rightChild=NULL;
+	root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
+	root->leftChild=NULL;
+	root->rightChild=NULL;
 }
 
 BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x)
