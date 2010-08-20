@@ -15,14 +15,14 @@ private:
 public:
 	int* data;
 	int size;
-	BinaryTree();
+	BinaryTree(BiTreeNode **root);
 	~BinaryTree();
 	void Print();
 	
 };
 
 
-void Initiate(BiTreeNode **root)
+BinaryTree::BinaryTree(BiTreeNode **root)
 {
 	*root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
 	(*root)->leftChild=NULL;
