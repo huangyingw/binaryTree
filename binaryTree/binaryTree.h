@@ -24,6 +24,9 @@ public:
 	void PreOrder(BiTreeNode *t,void Visit(DataType item));
 	void InOrder(BiTreeNode *t,void Visit(DataType item));
 	void PostOrder(BiTreeNode *t,void Visit(DataType item));
+	int Search(char str[],char t);
+	int SearchLeft(int Num[],int t);
+	int SearchRight(int Num[],int t);
 	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
 	void Print();
 };
@@ -112,7 +115,7 @@ void BiTree::PostOrder(BiTreeNode *t,void Visit(DataType item))
 	}
 }
 
-int Search(char str[],char t)
+int BiTree::Search(char str[],char t)
 {
 	int i=0;
 	while(str[i]!=t)
@@ -120,7 +123,7 @@ int Search(char str[],char t)
 	return i;
 }
 
-int SearchLeft(int Num[],int t)
+int BiTree::SearchLeft(int Num[],int t)
 {
 	int i=t;
 	while(Num[i]!=1&&i>=0)
@@ -130,7 +133,7 @@ int SearchLeft(int Num[],int t)
 	else return -1;
 }
 
-int SearchRight(int Num[],int t)
+int BiTree::SearchRight(int Num[],int t)
 {
 	int i=t;
 	while(Num[i]!=1&&i<=MaxSize-2)
