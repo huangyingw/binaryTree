@@ -7,6 +7,25 @@ typedef struct Node
 	struct Node *rightChild;
 }BiTreeNode;
 
+class BiTree
+{
+private:
+	ofstream fout;
+
+public:
+	int* data;
+	int size;
+	BiTree(int len);
+	void Print(BiTreeNode *bt,int n);
+	~BiTree();
+	void Visit(DataType item);
+	void PreOrder(BiTreeNode *t,void Visit(DataType item));
+	void InOrder(BiTreeNode *t,void Visit(DataType item));
+	void PostOrder(BiTreeNode *t,void Visit(DataType item));
+	void Print();
+};
+
+
 class BinaryTree
 {
 private:
@@ -57,24 +76,6 @@ BiTreeNode *InsertRightNode(BiTreeNode *curr,DataType x)
 	return curr->rightChild;
 }
 
-class BiTree
-{
-private:
-	ofstream fout;
-
-public:
-	int* data;
-	int size;
-	BiTree(int len);
-	void Print(BiTreeNode *bt,int n);
-	~BiTree();
-	void Visit(DataType item);
-	void PreOrder(BiTreeNode *t,void Visit(DataType item));
-	void InOrder(BiTreeNode *t,void Visit(DataType item));
-	void PostOrder(BiTreeNode *t,void Visit(DataType item));
-	void Print();
-	
-};
 
 void BiTree::Print(BiTreeNode *bt,int n)
 {
