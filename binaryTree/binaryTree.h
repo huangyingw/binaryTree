@@ -15,6 +15,7 @@ private:
 public:
 	int* data;
 	int size;
+	BiTreeNode * root;
 	BinaryTree(BiTreeNode **root);
 	~BinaryTree();
 	void Print();
