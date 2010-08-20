@@ -15,18 +15,20 @@ private:
 public:
 	int* data;
 	int size;
-	BiTree(int len);
 	BiTreeNode * root;
+	
+	BiTree(int len);
 	BiTree(BiTreeNode *root);
-	void Print(BiTreeNode *bt,int n);
 	~BiTree();
+	
+	void Print(BiTreeNode *bt,int n);
 	void Visit(DataType item);
-	void PreOrder(BiTreeNode *t,void Visit(DataType item));
-	void InOrder(BiTreeNode *t,void Visit(DataType item));
-	void PostOrder(BiTreeNode *t,void Visit(DataType item));
 	int Search(char str[],char t);
 	int SearchLeft(int Num[],int t);
 	int SearchRight(int Num[],int t);
+	void PreOrder(BiTreeNode *t,void Visit(DataType item));
+	void InOrder(BiTreeNode *t,void Visit(DataType item));
+	void PostOrder(BiTreeNode *t,void Visit(DataType item));
 	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
 	void Print();
 };
