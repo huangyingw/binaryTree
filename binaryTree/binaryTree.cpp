@@ -31,24 +31,21 @@ void PrintNum(int Num[])
 int _tmain(int argc, _TCHAR* argv[])
 {
 	/*
-	fout.open("output.txt");
 
 	int i;
 	BiTreeNode *q[MaxSize+1];//use to 
-	BiTreeNode *root;
 	int left,right,temp;
 	int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
-	char strA[MaxSize]="befcgdh";//pre_order
-	char strB[MaxSize]="febgchd";//in_order
+	char pre_order[MaxSize]="befcgdh";//pre_order
+	char in_order[MaxSize]="febgchd";//in_order
 	char point;int n;
-	n=strlen(strA);
-	Initiate(&root);
+	n=strlen(pre_order);
 	for(i=0;i<n;i++)
 	{
 		fout<<endl;
 		fout<<"i="<<i<<endl;
-		point=strA[i];
-		temp=Search(strB,point);
+		point=pre_order[i];
+		temp=Search(in_order,point);
 		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
 		PrintNum(Num);
