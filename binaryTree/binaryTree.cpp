@@ -30,6 +30,7 @@ void PrintNum(int Num[])
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	BiTree *bit=new BiTree();
 	/*
 
 	int i;

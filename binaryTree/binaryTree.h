@@ -17,8 +17,7 @@ public:
 	int size;
 	BiTreeNode * root;
 	
-	BiTree(int len);
-	BiTree(BiTreeNode *root);
+	BiTree();
 	~BiTree();
 	
 	void Print(BiTreeNode *bt,int n);
@@ -33,7 +32,7 @@ public:
 	void Print();
 };
 
-BiTree::BiTree(BiTreeNode *root)
+BiTree::BiTree()
 {
 	root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
 	root->leftChild=NULL;
