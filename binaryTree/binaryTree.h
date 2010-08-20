@@ -17,6 +17,7 @@ public:
 	int size;
 	BiTreeNode * root;
 	BinaryTree(BiTreeNode *root);
+	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
 	~BinaryTree();
 	void Print();
 	
@@ -30,7 +31,7 @@ BinaryTree::BinaryTree(BiTreeNode *root)
 	root->rightChild=NULL;
 }
 
-BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x)
+BiTreeNode* BinaryTree::InsertLeftNode(BiTreeNode *curr,DataType x)
 {
 	BiTreeNode *s,*t;
 	if(curr==NULL) return NULL;
