@@ -36,9 +36,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	int i;
 	
 	int left,right,temp;
-	int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
-	char pre_order[MaxSize]="befcgdh";//pre_order
-	char in_order[MaxSize]="febgchd";//in_order
+	
+	
 	char point;int n;
 	n=strlen(pre_order);
 	for(i=0;i<n;i++)
