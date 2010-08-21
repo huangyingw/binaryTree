@@ -25,7 +25,7 @@ public:
 	~BiTree();
 	
 	void Print(BiTreeNode *bt,int n);
-	void Visit(DataType item);
+	static void Visit(DataType item);
 	int Search(char str[],char t);
 	int SearchLeft(int t);
 	int SearchRight(int t);

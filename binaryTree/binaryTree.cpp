@@ -28,7 +28,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	bit->Print();
 	printf("****************************************\n\n");
 	printf("PreOrder: \t");
-	bit->PreOrder(bit->root->leftChild,bit->Visit);
+	bit->PreOrder(bit->root->leftChild,BiTree::Visit);
 	printf("\nInOrder:\t");
 	bit->InOrder(bit->root->leftChild,bit->Visit);
 	printf("\nPostOrder: \t");
