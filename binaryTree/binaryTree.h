@@ -18,7 +18,7 @@ public:
 	BiTreeNode * root;
 	BiTreeNode *q[MaxSize+1];//use to 
 	int Num[MaxSize];//use to indicate whether a char in in_order is treated.
-	char pre_order[MaxSize];//="befcgdh";//pre_order
+	char *pre_order;//="befcgdh";//pre_order
 	char in_order[MaxSize];//="febgchd";//in_order
 	
 	BiTree();
@@ -39,8 +39,8 @@ public:
 BiTree::BiTree()
 {
 	root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
-	pre_order[MaxSize]="befcgdh";
-	in_order[MaxSize]="febgchd";
+	pre_order="befcgdh";
+	//in_order[MaxSize]="febgchd";
 	root->leftChild=NULL;
 	root->rightChild=NULL;
 }
