@@ -23,19 +23,17 @@ ofstream fout;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	BiTree *bit=new BiTree();
-	/*
 
 	
-	PrintBiTree(root,0);
+	bit->Print();
 	printf("****************************************\n\n");
 	printf("PreOrder: \t");
-	PreOrder(root->leftChild,Visit);
+	bit->PreOrder(bit->root->leftChild,bit->Visit);
 	printf("\nInOrder:\t");
-	InOrder(root->leftChild,Visit);
+	bit->InOrder(bit->root->leftChild,bit->Visit);
 	printf("\nPostOrder: \t");
-	PostOrder(root->leftChild,Visit);
+	bit->PostOrder(bit->root->leftChild,bit->Visit);
 	printf("\n");
-	fout.close();
-	*/
+	
 	return 0;
 }
