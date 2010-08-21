@@ -34,7 +34,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	/*
 
 	int i;
-	BiTreeNode *q[MaxSize+1];//use to 
+	
 	int left,right,temp;
 	int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
 	char pre_order[MaxSize]="befcgdh";//pre_order

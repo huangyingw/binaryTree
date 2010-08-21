@@ -16,6 +16,10 @@ public:
 	int* data;
 	int size;
 	BiTreeNode * root;
+	BiTreeNode *q[MaxSize+1];//use to 
+	int Num[MaxSize];//use to indicate whether a char in in_order is treated.
+	char pre_order[MaxSize];//="befcgdh";//pre_order
+	char in_order[MaxSize];//="febgchd";//in_order
 	
 	BiTree();
 	~BiTree();
