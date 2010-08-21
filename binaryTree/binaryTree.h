@@ -27,18 +27,18 @@ public:
 	void Print(BiTreeNode *bt,int n);
 	void Visit(DataType item);
 	int Search(char str[],char t);
-	int SearchLeft(int Num[],int t);
-	int SearchRight(int Num[],int t);
+	int SearchLeft(int t);
+	int SearchRight(int t);
 	void PreOrder(BiTreeNode *t,void Visit(DataType item));
 	void InOrder(BiTreeNode *t,void Visit(DataType item));
 	void PostOrder(BiTreeNode *t,void Visit(DataType item));
 	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
 	BiTreeNode* InsertRightNode(BiTreeNode *curr,DataType x);
-	void PrintNum(int Num[]);
+	void PrintNum();
 	void Print();
 };
 
-void BiTree::PrintNum(int Num[])
+void BiTree::PrintNum()
 {
 	for(int index=0;index<MaxSize;index++)
 	{
@@ -69,12 +69,12 @@ BiTree::BiTree()
 		temp=Search(in_order,point);
 		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
-		PrintNum(Num);
+		PrintNum();
 		
-		left=SearchLeft(Num,temp);
+		left=SearchLeft(temp);
 		fout << "SearchLeft result->"<<left<<endl;
 		
-		right=SearchRight(Num,temp);
+		right=SearchRight(temp);
 		fout << "SearchRight result->"<<right<<endl;
 		
 		if(left==-1&&right==-1)//both
@@ -186,7 +186,7 @@ int BiTree::Search(char str[],char t)
 	return i;
 }
 
-int BiTree::SearchLeft(int Num[],int t)
+int BiTree::SearchLeft(int t)
 {
 	int i=t;
 	while(Num[i]!=1&&i>=0)
@@ -196,7 +196,7 @@ int BiTree::SearchLeft(int Num[],int t)
 	else return -1;
 }
 
-int BiTree::SearchRight(int Num[],int t)
+int BiTree::SearchRight(int t)
 {
 	int i=t;
 	while(Num[i]!=1&&i<=MaxSize-2)
