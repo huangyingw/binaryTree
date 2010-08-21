@@ -39,6 +39,8 @@ public:
 BiTree::BiTree()
 {
 	root=(BiTreeNode *)malloc(sizeof(BiTreeNode));
+	pre_order[MaxSize]="befcgdh";
+	in_order[MaxSize]="febgchd";
 	root->leftChild=NULL;
 	root->rightChild=NULL;
 }
