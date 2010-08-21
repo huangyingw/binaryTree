@@ -55,14 +55,13 @@ BiTree::BiTree()
 	in_order="febgchd";
 	root->leftChild=NULL;
 	root->rightChild=NULL;
-	int i;
 	
 	int left,right,temp;
 	
 	
 	char point;int n;
 	n=strlen(pre_order);
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		fout<<endl;
 		fout<<"i="<<i<<endl;
