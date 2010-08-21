@@ -10,7 +10,7 @@ typedef struct Node
 class BiTree
 {
 private:
-	ofstream fout;
+	static ofstream fout;
 
 public:
 	int* data;
@@ -41,9 +41,9 @@ void BiTree::PrintNum()
 {
 	for(int index=0;index<MaxSize;index++)
 	{
-		fout<<Num[index];
+		BiTree::fout<<Num[index];
 	}
-	fout<<endl;
+	BiTree::fout<<endl;
 }
 
 
@@ -62,39 +62,39 @@ BiTree::BiTree()
 	n=strlen(pre_order);
 	for(int i=0;i<n;i++)
 	{
-		fout<<endl;
-		fout<<"i="<<i<<endl;
+		BiTree::fout<<endl;
+		BiTree::fout<<"i="<<i<<endl;
 		point=pre_order[i];
 		temp=Search(in_order,point);
-		fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
+		BiTree::fout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
 		
 		PrintNum();
 		
 		left=SearchLeft(temp);
-		fout << "SearchLeft result->"<<left<<endl;
+		BiTree::fout << "SearchLeft result->"<<left<<endl;
 		
 		right=SearchRight(temp);
-		fout << "SearchRight result->"<<right<<endl;
+		BiTree::fout << "SearchRight result->"<<right<<endl;
 		
 		if(left==-1&&right==-1)//both
 		{
 			q[temp]=InsertLeftNode(root,point);
-			fout << "InsertLeftNode->"<<point<<endl;
-			fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
+			BiTree::fout << "InsertLeftNode->"<<point<<endl;
+			BiTree::fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 		else if(left!=-1&&q[left]->rightChild==NULL)
 		{
 			q[temp]=InsertRightNode(q[left],point);
-			fout << "InsertRightNode->"<<point<<endl;
-			fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
+			BiTree::fout << "InsertRightNode->"<<point<<endl;
+			BiTree::fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 		else if(right!=-1&&q[right]->leftChild==NULL)
 		{
 			q[temp]=InsertLeftNode(q[right],point);
-			fout << "InsertLeftNode->"<<point<<endl;
-			fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
+			BiTree::fout << "InsertLeftNode->"<<point<<endl;
+			BiTree::fout << "q["<<temp<<"]->"<<q[temp]->data<<endl;
 			Num[temp]=1;
 		}
 	}
@@ -132,18 +132,18 @@ void BiTree::Print(BiTreeNode *bt,int n)
 	int i;
 	if(bt==NULL) return;
 	Print(bt->rightChild,n+1);
-	for(i=0;i<n-1;i++) printf("   ");
+	for(i=0;i<n-1;i++) BiTree::fout<<"   ";
 	if(n>0)
 	{
-		printf("---");
-		printf("%c\n",bt->data);
+		BiTree::fout<<"---";
+		BiTree::fout<<bt->data<<endl;
 	}
 	Print(bt->leftChild,n+1);
 }
 
 void BiTree::Visit(DataType item)
 {
-	printf("%c   ",item);
+	BiTree::fout<<item<<"   ";
 }
 
 void BiTree::PreOrder(BiTreeNode *t,void Visit(DataType item))
