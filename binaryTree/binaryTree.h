@@ -35,7 +35,7 @@ public:
 	BiTreeNode *InsertLeftNode(BiTreeNode *curr,DataType x);
 	BiTreeNode* InsertRightNode(BiTreeNode *curr,DataType x);
 	void PrintNum();
-	void Print();
+	//void Print();
 };
 
 void BiTree::PrintNum()

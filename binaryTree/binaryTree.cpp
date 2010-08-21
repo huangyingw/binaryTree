@@ -25,7 +25,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	BiTree *bit=new BiTree();
 
 	
-	bit->Print();
+	bit->Print(bit->root,0);
 	printf("****************************************\n\n");
 	printf("PreOrder: \t");
 	bit->PreOrder(bit->root->leftChild,BiTree::Visit);
