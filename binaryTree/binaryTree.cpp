@@ -17,8 +17,6 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
-	int i;
 	BiTreeNode *q[MaxSize+1];//use to 
 	BiTreeNode *root;
 	int left,right,in_Order_Index;
@@ -28,14 +26,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	char pre_Order_Index;int n;
 	n=strlen(pre_Order_Str);
 	Initiate(&root);
-	for(i=0;i<n;i++)
+	for(int nav=0;nav<n;nav++)
 	{
-		pre_Order_Index=pre_Order_Str[i];
+		pre_Order_Index=pre_Order_Str[nav];
 		in_Order_Index=Search(in_Order_Str,pre_Order_Index);
 		
-		
 		left=SearchLeft(is_Visited_Array,in_Order_Index);
-		
 		right=SearchRight(is_Visited_Array,in_Order_Index);
 		
 		if(left==-1&&right==-1)//both
