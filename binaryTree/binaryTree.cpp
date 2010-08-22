@@ -1,4 +1,4 @@
-// binaryTree.cpp : Defines the entry point for the console application.
+// binaryTree.cpp : Defines the entry pre_Order_Index for the console application.
 //
 
 #include "stdafx.h"
@@ -22,37 +22,36 @@ int _tmain(int argc, _TCHAR* argv[])
 	BiTreeNode *q[MaxSize+1];//use to 
 	BiTreeNode *root;
 	int left,right,in_Order_Index;
-	int is_Visited[MaxSize]={0};//use to indicate whether a char in in_order is treated.
+	int is_Visited_Array[MaxSize]={0};//use to indicate whether a char in in_order is treated.
 	char pre_Order_Str[MaxSize]="befcgdh";//pre_order
 	char in_Order_Str[MaxSize]="febgchd";//in_order
-	char point;int n;
+	char pre_Order_Index;int n;
 	n=strlen(pre_Order_Str);
 	Initiate(&root);
 	for(i=0;i<n;i++)
 	{
-		point=pre_Order_Str[i];
-		in_Order_Index=Search(in_Order_Str,point);
+		pre_Order_Index=pre_Order_Str[i];
+		in_Order_Index=Search(in_Order_Str,pre_Order_Index);
 		
 		
-		left=SearchLeft(is_Visited,in_Order_Index);
+		left=SearchLeft(is_Visited_Array,in_Order_Index);
 		
-		right=SearchRight(is_Visited,in_Order_Index);
+		right=SearchRight(is_Visited_Array,in_Order_Index);
 		
 		if(left==-1&&right==-1)//both
 		{
-			q[in_Order_Index]=InsertLeftNode(root,point);
-			is_Visited[in_Order_Index]=1;
+			q[in_Order_Index]=InsertLeftNode(root,pre_Order_Index);
+			
 		}
 		else if(left!=-1&&q[left]->rightChild==NULL)
 		{
-			q[in_Order_Index]=InsertRightNode(q[left],point);
-			is_Visited[in_Order_Index]=1;
+			q[in_Order_Index]=InsertRightNode(q[left],pre_Order_Index);
 		}
 		else if(right!=-1&&q[right]->leftChild==NULL)
 		{
-			q[in_Order_Index]=InsertLeftNode(q[right],point);
-			is_Visited[in_Order_Index]=1;
+			q[in_Order_Index]=InsertLeftNode(q[right],pre_Order_Index);
 		}
+		is_Visited_Array[in_Order_Index]=1;
 	}
 	PrintBiTree(root,0);
 	printf("PreOrder: \t");
