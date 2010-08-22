@@ -15,14 +15,6 @@ typedef char DataType;
 #include"Bitree.h"
 using namespace std;
 
-
-void PrintNum(int Num[])
-{
-	for(int index=0;index<MaxSize;index++)
-	{
-	}
-}
-
 int _tmain(int argc, _TCHAR* argv[])
 {
 
@@ -41,7 +33,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		point=strA[i];
 		temp=Search(strB,point);
 		
-		PrintNum(Num);
 		
 		left=SearchLeft(Num,temp);
 		
@@ -64,7 +55,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 	PrintBiTree(root,0);
-	printf("****************************************\n\n");
 	printf("PreOrder: \t");
 	PreOrder(root->leftChild,Visit);
 	printf("\nInOrder:\t");
