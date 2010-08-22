@@ -22,7 +22,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	BiTreeNode *q[MaxSize+1];//use to 
 	BiTreeNode *root;
 	int left,right,in_Index;
-	int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
+	int is_Visited[MaxSize]={0};//use to indicate whether a char in in_order is treated.
 	char strA[MaxSize]="befcgdh";//pre_order
 	char strB[MaxSize]="febgchd";//in_order
 	char point;int n;
@@ -34,24 +34,24 @@ int _tmain(int argc, _TCHAR* argv[])
 		in_Index=Search(strB,point);
 		
 		
-		left=SearchLeft(Num,in_Index);
+		left=SearchLeft(is_Visited,in_Index);
 		
-		right=SearchRight(Num,in_Index);
+		right=SearchRight(is_Visited,in_Index);
 		
 		if(left==-1&&right==-1)//both
 		{
 			q[in_Index]=InsertLeftNode(root,point);
-			Num[in_Index]=1;
+			is_Visited[in_Index]=1;
 		}
 		else if(left!=-1&&q[left]->rightChild==NULL)
 		{
 			q[in_Index]=InsertRightNode(q[left],point);
-			Num[in_Index]=1;
+			is_Visited[in_Index]=1;
 		}
 		else if(right!=-1&&q[right]->leftChild==NULL)
 		{
 			q[in_Index]=InsertLeftNode(q[right],point);
-			Num[in_Index]=1;
+			is_Visited[in_Index]=1;
 		}
 	}
 	PrintBiTree(root,0);

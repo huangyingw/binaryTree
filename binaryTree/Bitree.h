@@ -96,22 +96,22 @@ int Search(char str[],char t)
 	return i;
 }
 
-int SearchLeft(int Num[],int t)
+int SearchLeft(int is_Visited[],int t)
 {
 	int i=t;
-	while(Num[i]!=1&&i>=0)
+	while(is_Visited[i]!=1&&i>=0)
 		i--;
-	if(Num[i]==1)
+	if(is_Visited[i]==1)
 		return i;
 	else return -1;
 }
 
-int SearchRight(int Num[],int t)
+int SearchRight(int is_Visited[],int t)
 {
 	int i=t;
-	while(Num[i]!=1&&i<=MaxSize-2)
+	while(is_Visited[i]!=1&&i<=MaxSize-2)
 		i++;
-	if(Num[i]==1)
+	if(is_Visited[i]==1)
 		return i;
 	else return -1;
 }
