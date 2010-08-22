@@ -21,37 +21,37 @@ int _tmain(int argc, _TCHAR* argv[])
 	int i;
 	BiTreeNode *q[MaxSize+1];//use to 
 	BiTreeNode *root;
-	int left,right,in_Index;
+	int left,right,in_Order_Index;
 	int is_Visited[MaxSize]={0};//use to indicate whether a char in in_order is treated.
-	char strA[MaxSize]="befcgdh";//pre_order
-	char strB[MaxSize]="febgchd";//in_order
+	char pre_Order_Str[MaxSize]="befcgdh";//pre_order
+	char in_Order_Str[MaxSize]="febgchd";//in_order
 	char point;int n;
-	n=strlen(strA);
+	n=strlen(pre_Order_Str);
 	Initiate(&root);
 	for(i=0;i<n;i++)
 	{
-		point=strA[i];
-		in_Index=Search(strB,point);
+		point=pre_Order_Str[i];
+		in_Order_Index=Search(in_Order_Str,point);
 		
 		
-		left=SearchLeft(is_Visited,in_Index);
+		left=SearchLeft(is_Visited,in_Order_Index);
 		
-		right=SearchRight(is_Visited,in_Index);
+		right=SearchRight(is_Visited,in_Order_Index);
 		
 		if(left==-1&&right==-1)//both
 		{
-			q[in_Index]=InsertLeftNode(root,point);
-			is_Visited[in_Index]=1;
+			q[in_Order_Index]=InsertLeftNode(root,point);
+			is_Visited[in_Order_Index]=1;
 		}
 		else if(left!=-1&&q[left]->rightChild==NULL)
 		{
-			q[in_Index]=InsertRightNode(q[left],point);
-			is_Visited[in_Index]=1;
+			q[in_Order_Index]=InsertRightNode(q[left],point);
+			is_Visited[in_Order_Index]=1;
 		}
 		else if(right!=-1&&q[right]->leftChild==NULL)
 		{
-			q[in_Index]=InsertLeftNode(q[right],point);
-			is_Visited[in_Index]=1;
+			q[in_Order_Index]=InsertLeftNode(q[right],point);
+			is_Visited[in_Order_Index]=1;
 		}
 	}
 	PrintBiTree(root,0);
