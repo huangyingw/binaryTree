@@ -6,7 +6,7 @@
 #include <fstream>
 #define MaxSize 20
 typedef char DataType;
-#include"Bitree.h"
+#include"bitree.h"
 using namespace std;
 
 ofstream fout;
