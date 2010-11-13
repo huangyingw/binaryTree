@@ -20,7 +20,7 @@ void PrintNum(int Num[])
 int main()
 {
   int i;
-  BiTreeNode *q[MaxSize+1];//use to 
+  BiTreeNode *q[MaxSize+1];//use to
   BiTreeNode *root;
   int left,right,temp;
   int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
