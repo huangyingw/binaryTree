@@ -26,10 +26,11 @@ int main()
   int Num[MaxSize]={0};//use to indicate whether a char in in_order is treated.
   char strA[MaxSize]="befcgdh";//pre_order
   char strB[MaxSize]="febgchd";//in_order
-  char point;int n;
-  n=strlen(strA);
+  char point;
+  int len;
+  len=strlen(strA);
   Initiate(&root);
-  for(i=0;i<n;i++)
+  for(i=0;i<len;i++)
   {
     cout<<endl;
     cout<<"i="<<i<<endl;
