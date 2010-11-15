@@ -10,10 +10,10 @@ typedef char DataType;
 using namespace std;
 
 
-void PrintNum(int Num[])
+void PrintNum(int data[])
 {
   for(int index=0;index<MaxSize;index++)
-    cout<<Num[index];
+    cout<<data[index];
   cout<<endl;
 }
 
