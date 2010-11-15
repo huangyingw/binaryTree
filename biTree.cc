@@ -4,7 +4,7 @@
 #include<string.h>
 #define MaxSize 20
 typedef char DataType;
-#include"Bitree.h"
+#include"biTree.h"
 int main()
 {
 	int i;

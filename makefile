@@ -1,4 +1,3 @@
-run : BiTree.o 
-	gcc -o run BiTree.o
-main.o : BiTree.c,Bitree.h
-	gcc -c -o BiTree.o BiTree.c,Bitree.h
+OBJECTS = biTree.exe
+include ../../GNU_makefile_template
+LOCFLAGS = -I../biTree
