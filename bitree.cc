@@ -68,7 +68,6 @@ int main()
     }
   }
   PrintBiTree(root,0);
-  printf("****************************************\n\n");
   printf("PreOrder: \t");
   PreOrder(root->leftChild,Visit);
   printf("\nInOrder:\t");
