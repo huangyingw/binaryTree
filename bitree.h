@@ -57,34 +57,34 @@ void Visit(DataType item)
   printf("%c   ",item);
 }
 
-void PreOrder(BiTreeNode *t,void Visit(DataType item))
+void PreOrder(BiTreeNode *t,void varVisit(DataType item))
 {
   if(t!=NULL)
   {
-    Visit(t->data);
-    PreOrder(t->leftChild,Visit);
-    PreOrder(t->rightChild,Visit);
+    varVisit(t->data);
+    PreOrder(t->leftChild,varVisit);
+    PreOrder(t->rightChild,varVisit);
   }
 }
 
-void InOrder(BiTreeNode *t,void Visit(DataType item))
+void InOrder(BiTreeNode *t,void varVisit(DataType item))
 {
   if(t!=NULL)
   {
 
-    InOrder(t->leftChild,Visit);
-    Visit(t->data);
-    InOrder(t->rightChild,Visit);
+    InOrder(t->leftChild,varVisit);
+    varVisit(t->data);
+    InOrder(t->rightChild,varVisit);
   }
 }
 
-void PostOrder(BiTreeNode *t,void Visit(DataType item))
+void PostOrder(BiTreeNode *t,void varVisit(DataType item))
 {
   if(t!=NULL)
   {
-    PostOrder(t->leftChild,Visit);
-    PostOrder(t->rightChild,Visit);
-    Visit(t->data);
+    PostOrder(t->leftChild,varVisit);
+    PostOrder(t->rightChild,varVisit);
+    varVisit(t->data);
   }
 }
 
