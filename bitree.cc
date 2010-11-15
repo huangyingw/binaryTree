@@ -34,7 +34,7 @@ int main()
     cout<<"i="<<i<<endl;
     point=strA[i];
     temp=Search(strB,point);
-    cout << "Search for->"<<point<<"->position in in_order->"<<temp<<endl;
+    cout << "Search for  "<<point<<"'s position in->"<<strB<<" in_order->"<<temp<<endl;
 
     PrintNum(Num);
 
