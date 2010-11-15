@@ -27,7 +27,7 @@ Node<T>* TreeReconstruction(T* preOrder, T* midOrder, int length) {
   }
   Node<T>* root = new Node<T>();
   root->data = preOrder[0];
-  int index = IndexOf(midOrder, length, preOrder[0]); // Find index of root in mid-order sequence.
+  int index = IndexOf(midOrder, length, preOrder[0]);
   assert(index != -1);
   root->left = TreeReconstruction(preOrder + 1, midOrder, index); // Reconstruct root's left child.
   root->right = TreeReconstruction(preOrder + 1 + index, midOrder +1 + index, length - 1 - index); //Reconstruct root's right child.
