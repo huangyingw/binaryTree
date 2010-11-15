@@ -10,7 +10,6 @@ struct Node {
   Node * right;
 };
 
-// Find the index of an element in a sequence within a certain length.
 template <typename T>
 int IndexOf(T* sequence, int length, T element) {
   for(int i = 0; i < length; ++i) {
@@ -21,7 +20,6 @@ int IndexOf(T* sequence, int length, T element) {
   return -1;
 }
 
-// Reconstruct a binary tree through its pre- and mid-order traversal.
 template <typename T>
 Node<T>* TreeReconstruction(T* preOrder, T* midOrder, int length) {
   if(length == 0) {
