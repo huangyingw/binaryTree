@@ -27,8 +27,6 @@ int main()
   char strA[MaxSize]="befcgdh";//pre_order
   char strB[MaxSize]="febgchd";//in_order
   char point;
-  int len;
-  len=strlen(strA);
   Initiate(&root);
   for(i=0;i<strlen(strA);i++)
   {
