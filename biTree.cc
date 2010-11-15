@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <assert.h>
 using namespace std;
 
@@ -46,6 +47,21 @@ void PrintPostOrder(Node<T>* root) {
   cout << root->data;
 }
 
+template <typename T>
+void PrintBiTree(Node<T> *bt,int n)
+{
+  int i;
+  if(bt==NULL) return;
+  PrintBiTree(bt->right,n+1);
+  for(i=0;i<n-1;i++) printf("   ");
+  if(n>0)
+  {
+    printf("---");
+    printf("%d\n",bt->data);
+  }
+  PrintBiTree(bt->left,n+1);
+}
+
 // Test code: main.
 int main(int argc, char ** argv) {
   int pre[8] = {1,2,4,5,7,8,3,6};
@@ -53,5 +69,6 @@ int main(int argc, char ** argv) {
   Node<int>* tree = TreeReconstruction(pre, mid, 8);
   PrintPostOrder(tree);
   cout << endl;
+  PrintBiTree(tree,1);
   return 0;
 }
