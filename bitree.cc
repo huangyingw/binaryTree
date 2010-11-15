@@ -30,7 +30,7 @@ int main()
   int len;
   len=strlen(strA);
   Initiate(&root);
-  for(i=0;i<len;i++)
+  for(i=0;i<strlen(strA);i++)
   {
     cout<<endl;
     cout<<"i="<<i<<endl;
