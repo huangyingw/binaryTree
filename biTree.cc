@@ -49,10 +49,22 @@ void PrintBiTree(Node<T> *bt,int n)
   PrintBiTree(bt->left,n+1);
 }
 
+template <typename T>
+void PrintPostOrder(Node<T>* root) {
+  if(root == NULL) {
+    return;
+  }
+  PrintPostOrder(root->left);
+  PrintPostOrder(root->right);
+  cout << root->data;
+}
+
 int main(int argc, char ** argv) {
   int pre[8] = {1,2,4,5,7,8,3,6};
   int mid[8] = {4,2,7,5,8,1,3,6};
   Node<int>* tree = TreeReconstruction(pre, mid, 8);
   PrintBiTree(tree,1);
+  PrintPostOrder(tree);
+  printf("\n");
   return 0;
 }
