@@ -36,18 +36,7 @@ Node<T>* TreeReconstruction(T* preOrder, T* midOrder, int length) {
   return root;
 }
 
-// Print the post-order traversal of a binary tree.
-template <typename T>
-void PrintPostOrder(Node<T>* root) {
-  if(root == NULL) {
-    return;
-  }
-  PrintPostOrder(root->left);
-  PrintPostOrder(root->right);
-  cout << root->data;
-}
-
-template <typename T>
+  template <typename T>
 void PrintBiTree(Node<T> *bt,int n)
 {
   int i;
@@ -67,8 +56,6 @@ int main(int argc, char ** argv) {
   int pre[8] = {1,2,4,5,7,8,3,6};
   int mid[8] = {4,2,7,5,8,1,3,6};
   Node<int>* tree = TreeReconstruction(pre, mid, 8);
-  PrintPostOrder(tree);
-  cout << endl;
   PrintBiTree(tree,1);
   return 0;
 }
